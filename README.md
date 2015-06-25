@@ -5,8 +5,8 @@ Randomize layout for CraftML
     $ npm install randomize-layout
 
 ### Parameters
-    - xspace: maximum x-coordinate at which an item can be placed
-    - yspace: maximum y-coordinate at which an item can be placed
+- xspace: maximum x-coordinate at which an item can be placed
+- yspace: maximum y-coordinate at which an item can be placed
 
 ### Example
 ```html
