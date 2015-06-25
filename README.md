@@ -16,7 +16,7 @@ Randomize layout for CraftML
     <randomize-layout>
         <repeat n="10">
             <cube></cube>
-        </repeat>s
+        </repeat>
     </randomize-layout> 
 
 </craft>
