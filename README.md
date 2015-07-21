@@ -1,8 +1,13 @@
 # randomize-layout
 Randomize layout for CraftML
 
-### Install
-    $ npm install randomize-layout
+### Usage
+```html
+<craft>
+    <craft name="randomize-layout" module="randomize-layout"/>
+    <randomize-layout></randomize-layout>
+</craft>
+```
 
 ### Parameters
 - xspace: maximum x-coordinate at which an item can be placed

@@ -1,34 +1,29 @@
 <craft name="randomize-layout">
     <parameter name="xspace" type="int" default="100"/>
     <parameter name="yspace" type="int" default="100"/>
-    <g>
-        <content></content>
-    </g>
+    <content>
+        <repeat n="10">
+            <cube></cube>
+        </repeat>
+    </content>
     <script>
+        var contentSolids = scope.solids
 
-        function main(params, scope){
-
-            var contentSolids = scope.solids[0].children
-
-            contentSolids.forEach(function(solid){
-                var randx = Math.floor((Math.random() * params.xspace) + 1)
-                var randy = Math.floor((Math.random() * params.yspace) + 1)
-                
-                solid.translateTo({
-                    x: randx,
-                    y: randy, 
-                    z: solid.layout.location.z
-                })
-
-                randx = randx + solid.layout.size.x
-                randy = randy + solid.layout.size.y
-
-                solid.layout.location.z = 0
-
+        contentSolids.forEach(function(solid){
+            var randx = Math.floor((Math.random() * params.xspace) + 1)
+            var randy = Math.floor((Math.random() * params.yspace) + 1)
+            
+            solid.translateTo({
+                x: randx,
+                y: randy, 
+                z: solid.layout.position.z
             })
 
-            scope.solids[0].fitToChildren()
-        }
+            randx = randx + solid.layout.size.x
+            randy = randy + solid.layout.size.y
 
+            solid.layout.position.z = 0
+
+        })
     </script>
 </craft>
